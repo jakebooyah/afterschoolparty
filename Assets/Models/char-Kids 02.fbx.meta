@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: 0903a80a68d40401ca114a8269176a65
+timeCreated: 1478396733
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: chest
+    100004: head
+    100006: Kid_02
+    100008: Kid_02_Bag
+    100010: Kid_02_rigg
+    100012: lower_leg_L
+    100014: lower_leg_R
+    100016: torso
+    100018: upper_arm_L
+    100020: upper_arm_R
+    100022: upper_leg_L
+    100024: upper_leg_R
+    400000: //RootNode
+    400002: chest
+    400004: head
+    400006: Kid_02
+    400008: Kid_02_Bag
+    400010: Kid_02_rigg
+    400012: lower_leg_L
+    400014: lower_leg_R
+    400016: torso
+    400018: upper_arm_L
+    400020: upper_arm_R
+    400022: upper_leg_L
+    400024: upper_leg_R
+    4300000: Kid_02
+    4300002: Kid_02_Bag
+    7400000: kid_take_2
+    7400002: kid_bomb_2
+    7400004: kid_idle_2
+    7400006: kid_run_2
+    7400008: Kid_running_girl
+    9500000: //RootNode
+    13700000: Kid_02
+    13700002: Kid_02_Bag
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: kid_take_2
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 22
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Kid_02
+        weight: 1
+      - path: Kid_02_Bag
+        weight: 1
+      - path: Kid_02_rigg
+        weight: 1
+      - path: Kid_02_rigg/torso
+        weight: 1
+      - path: Kid_02_rigg/torso/chest
+        weight: 1
+      - path: Kid_02_rigg/torso/chest/head
+        weight: 1
+      - path: Kid_02_rigg/torso/chest/upper_arm_L
+        weight: 1
+      - path: Kid_02_rigg/torso/chest/upper_arm_R
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_L
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_L/lower_leg_L
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_R
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_R/lower_leg_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: kid_bomb_2
+      takeName: Getting_bomb
+      firstFrame: -1
+      lastFrame: 37
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Kid_02
+        weight: 1
+      - path: Kid_02_Bag
+        weight: 1
+      - path: Kid_02_rigg
+        weight: 1
+      - path: Kid_02_rigg/torso
+        weight: 1
+      - path: Kid_02_rigg/torso/chest
+        weight: 1
+      - path: Kid_02_rigg/torso/chest/head
+        weight: 1
+      - path: Kid_02_rigg/torso/chest/upper_arm_L
+        weight: 1
+      - path: Kid_02_rigg/torso/chest/upper_arm_R
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_L
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_L/lower_leg_L
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_R
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_R/lower_leg_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: kid_idle_2
+      takeName: Kid_idle
+      firstFrame: -1
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Kid_02
+        weight: 1
+      - path: Kid_02_Bag
+        weight: 1
+      - path: Kid_02_rigg
+        weight: 1
+      - path: Kid_02_rigg/torso
+        weight: 1
+      - path: Kid_02_rigg/torso/chest
+        weight: 1
+      - path: Kid_02_rigg/torso/chest/head
+        weight: 1
+      - path: Kid_02_rigg/torso/chest/upper_arm_L
+        weight: 1
+      - path: Kid_02_rigg/torso/chest/upper_arm_R
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_L
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_L/lower_leg_L
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_R
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_R/lower_leg_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: kid_run_2
+      takeName: Kid_running
+      firstFrame: -1
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Kid_02
+        weight: 1
+      - path: Kid_02_Bag
+        weight: 1
+      - path: Kid_02_rigg
+        weight: 1
+      - path: Kid_02_rigg/torso
+        weight: 1
+      - path: Kid_02_rigg/torso/chest
+        weight: 1
+      - path: Kid_02_rigg/torso/chest/head
+        weight: 1
+      - path: Kid_02_rigg/torso/chest/upper_arm_L
+        weight: 1
+      - path: Kid_02_rigg/torso/chest/upper_arm_R
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_L
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_L/lower_leg_L
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_R
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_R/lower_leg_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Kid_running_girl
+      takeName: Kid_running_girl
+      firstFrame: -1
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Kid_02
+        weight: 1
+      - path: Kid_02_Bag
+        weight: 1
+      - path: Kid_02_rigg
+        weight: 1
+      - path: Kid_02_rigg/torso
+        weight: 1
+      - path: Kid_02_rigg/torso/chest
+        weight: 1
+      - path: Kid_02_rigg/torso/chest/head
+        weight: 1
+      - path: Kid_02_rigg/torso/chest/upper_arm_L
+        weight: 1
+      - path: Kid_02_rigg/torso/chest/upper_arm_R
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_L
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_L/lower_leg_L
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_R
+        weight: 1
+      - path: Kid_02_rigg/torso/upper_leg_R/lower_leg_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
