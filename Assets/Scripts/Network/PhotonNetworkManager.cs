@@ -54,7 +54,7 @@ public class PhotonNetworkManager : Photon.PunBehaviour {
 		Debug.Log("OnJoinedRoom :: " + PhotonNetwork.connected);
 		SetActive (PhotonNetwork.connected);
 			
-		GameObject character = PhotonNetwork.Instantiate ("Prefabs/Character/Kids-" + Random.Range(1, 4), spawns[0].position, Quaternion.identity, 0);
+		GameObject character = PhotonNetwork.Instantiate ("Prefabs/Character/Kids-" + Random.Range(1, 5), spawns[0].position, Quaternion.identity, 0);
 		myPhotonView = character.GetComponent<PhotonView>();
 
 		//		monster.GetComponent<myThirdPersonController>().isControllable = true;
