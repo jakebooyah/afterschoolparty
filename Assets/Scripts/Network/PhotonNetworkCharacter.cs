@@ -33,6 +33,42 @@ public class PhotonNetworkCharacter : Photon.MonoBehaviour {
 		photonView.RPC ("RPCMyPosition", PhotonTargets.All, viewId, position);		
 	}
 
+	public void UpdateScore1 (int score) {
+		photonView.RPC ("RPCUpdateScore1", PhotonTargets.All, score);		
+	}
+
+	public void UpdateScore2 (int score) {
+		photonView.RPC ("RPCUpdateScore2", PhotonTargets.All, score);		
+	}
+
+	public void UpdateScore3 (int score) {
+		photonView.RPC ("RPCUpdateScore3", PhotonTargets.All, score);		
+	}
+
+	public void UpdateScore4 (int score) {
+		photonView.RPC ("RPCUpdateScore4", PhotonTargets.All, score);		
+	}
+
+	[PunRPC]
+	public void RPCUpdateScore1 (int score) {
+		player.UpdateScore1 (score);
+	}
+
+	[PunRPC]
+	public void RPCUpdateScore2 (int score) {
+		player.UpdateScore2 (score);
+	}
+
+	[PunRPC]
+	public void RPCUpdateScore3 (int score) {
+		player.UpdateScore3 (score);
+	}
+
+	[PunRPC]
+	public void RPCUpdateScore4 (int score) {
+		player.UpdateScore4 (score);
+	}
+
 	[PunRPC]
 	public void RPCMyPosition (int viewId, Vector3 position) {
 		Debug.Log ("RPC My position :: " + position);
@@ -44,17 +80,5 @@ public class PhotonNetworkCharacter : Photon.MonoBehaviour {
 		Debug.Log ("RPCMove :: " + viewId + ", " + position.ToString ());
 		movePosition = position.ToString ();
 		player.OnMove (position);
-//		if (viewId == photonView.viewID) {
-//			player.OnMove (position);
-//		}
-	}
-
-	[PunRPC]
-	public void RCPPickupCoin () {
-
-	}
-
-	[PunRPC]
-	void RPCEmotion () {
 	}
 }

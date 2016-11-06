@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class CharacterController : MonoBehaviour
@@ -6,10 +7,15 @@ public class CharacterController : MonoBehaviour
 	private Vector3 endPoint;
 	public float duration = 0.1f;
 	private float yAxis;
+	private int playerId;
 	private Quaternion rotateTo;
 
 	public int score = 0;
 	public bool isStunt = false;
+	public Text p1score;
+	public Text p2score;
+	public Text p3score;
+	public Text p4score;
 
 	public PhotonView photonView;
 	public PhotonNetworkCharacter photonCharacter;
@@ -20,12 +26,18 @@ public class CharacterController : MonoBehaviour
 
 	void Start ()
 	{
+		p1score = GameObject.Find ("P1Score").GetComponent<Text> ();
+		p2score = GameObject.Find ("P2Score").GetComponent<Text> ();
+		p3score = GameObject.Find ("P3Score").GetComponent<Text> ();
+		p4score = GameObject.Find ("P4Score").GetComponent<Text> ();
+
 		// save the y axis value of gameobject
 		yAxis = gameObject.transform.position.y;
 		photonView = GetComponent<PhotonView> ();
 		photonCharacter = GetComponent<PhotonNetworkCharacter> ();
 		animator = GetComponent<Animator> ();
 		Prepare ();
+		playerId = PhotonNetwork.playerList.Length;
 
 		Debug.Log ("1. Prepare :: " + photonView.viewID);
 	}
@@ -116,6 +128,27 @@ public class CharacterController : MonoBehaviour
 		currentPosition = position;
 	}
 
+	public void UpdateScore1 (int score)
+	{
+		p1score.text = "P1: " + score.ToString ();
+	}
+
+	public void UpdateScore2 (int score)
+	{
+		p2score.text = "P2: " + score.ToString ();
+
+	}
+
+	public void UpdateScore3 (int score)
+	{
+		p3score.text = "P3: " + score.ToString ();
+	}
+
+	public void UpdateScore4 (int score)
+	{
+		p4score.text = "P4: " + score.ToString ();
+	}
+
 	public void OnMove (Vector3 futureTransform)
 	{
 		Debug.Log ("Position :: " + futureTransform);
@@ -138,6 +171,19 @@ public class CharacterController : MonoBehaviour
 			other.gameObject.SetActive (false);
 			Destroy (other.gameObject);
 			score = score + 1;
+
+			if (PhotonNetwork.isMasterClient) {
+				if (playerId == 1) {
+					photonCharacter.UpdateScore1 (score);
+				} else if (playerId == 2) {
+					photonCharacter.UpdateScore2 (score);
+				} else if (playerId == 3) {
+					photonCharacter.UpdateScore3 (score);
+				} else if (playerId == 4) {
+					photonCharacter.UpdateScore4 (score);
+				}
+			}
+
 			animator.SetTrigger ("isTake");
 		} else if (other.gameObject.CompareTag ("Bomb")) {
 			StartCoroutine (spawnExplosion ());
@@ -157,7 +203,7 @@ public class CharacterController : MonoBehaviour
 		yield return new WaitForSeconds (time);
 		isStunt = false;
 	}
-	
+
 	IEnumerator spawnExplosion ()
 	{
 		GameObject item = Instantiate (Resources.Load ("Prefabs/Explosion"), transform.position, Quaternion.identity) as GameObject;

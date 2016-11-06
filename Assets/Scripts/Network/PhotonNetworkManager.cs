@@ -6,6 +6,7 @@ public class PhotonNetworkManager : Photon.PunBehaviour {
 	public PhotonView myPhotonView;
 	public Transform[] spawns;
 	public GameObject panel;
+	public GameObject scorePanel;
 	public GameObject[] players;
 
 	void Start () {
@@ -13,6 +14,7 @@ public class PhotonNetworkManager : Photon.PunBehaviour {
 
 	void SetActive (bool status) {
 		panel.SetActive (!status);
+		scorePanel.SetActive (status);
 	}
 
 	void OnGUI () {

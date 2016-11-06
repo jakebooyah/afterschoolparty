@@ -3,7 +3,6 @@ using System.Collections;
 
 public class GameItemManager : MonoBehaviour {
 	public int maxPosition = 4;
-	public int limitItems = 100;
 	public int items = 0;
 
 	public float counter = 10f;
@@ -17,13 +16,15 @@ public class GameItemManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		counter -= Time.deltaTime;
-
-		if (counter <= 0 && items < limitItems) {
+		if (counter <= 0) {
 			counter = 10f;
 			SetCoin ();
 			SetBomb ();
-		}			
+		}	
+
+		if (counter > 0) {
+			counter -= Time.deltaTime;
+		}
 	}
 
 	public void SetCoin () {
