@@ -5,7 +5,7 @@ public class GameItemManager : MonoBehaviour {
 	public int maxPosition = 4;
 	public int items = 0;
 
-	public float counter = 10f;
+	public float counter = 3f;
 
 	public PhotonNetworkGameItemManager photonGameItemManager;
 
@@ -17,9 +17,15 @@ public class GameItemManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (counter <= 0) {
-			counter = 10f;
-			SetCoin ();
-			SetBomb ();
+			counter = 3f;
+			float dropChance = Random.Range (0, 100);
+			if (dropChance < 10) {
+				SetBomb ();
+				SetCoin ();
+			} else {
+				SetCoin ();
+				SetCoin ();
+			}
 		}	
 
 		if (counter > 0) {
@@ -39,7 +45,7 @@ public class GameItemManager : MonoBehaviour {
 	IEnumerator CoinSpawn() {
 		yield return new WaitForSeconds (1f);
 		int rndStart = Random.Range (-maxPosition, maxPosition);
-		Vector3 spawnPosition = new Vector3 (Random.Range (-4, 4), 0, Random.Range (-2, 2));
+		Vector3 spawnPosition = new Vector3 (Random.Range (-2, 2), 0, Random.Range (-2, 2));
 		if (PhotonNetwork.isMasterClient) {
 			photonGameItemManager.SpawnCoin (spawnPosition);
 		}
@@ -57,7 +63,7 @@ public class GameItemManager : MonoBehaviour {
 	IEnumerator BombSpawn() {
 		yield return new WaitForSeconds (1f);
 		int rndStart = Random.Range (-maxPosition, maxPosition);
-		Vector3 spawnPosition = new Vector3 (Random.Range (-4, 4), 0, Random.Range (-2, 2));
+		Vector3 spawnPosition = new Vector3 (Random.Range (-2, 2), 0, Random.Range (-2, 2));
 		if (PhotonNetwork.isMasterClient) {
 			photonGameItemManager.SpawnBomb (spawnPosition);
 		}
